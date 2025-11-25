@@ -1,0 +1,43 @@
+
+
+
+.ButtonWhite {
+    display:inline-block;
+    height:56px;
+    line-height:52px;
+    border-radius:30px;
+    font-family:var(--SemiBold);
+    font-size:18px;
+    color:#000000;
+    text-decoration:none;
+    padding:0 30px;
+    background:#fff;  
+    border:solid var(--MainColor) 1px; 
+    transition:0.3s;
+    &:hover {
+        background:#fff;
+        color:var(--Color1);
+    }
+}   
+
+
+.ButtonTransparent {
+    display:inline-block;
+    height:56px;
+    line-height:52px;
+    border-radius:30px;
+    font-family:var(--SemiBold);
+    font-size:18px;
+    color:#000000;
+    text-decoration:none;
+    padding:0 42px;
+    background:rgba(255, 255, 255, 0.2);  
+    border:solid rgba(189, 211, 208, 1) 1px; 
+    transition:0.3s;
+    &:hover {
+        background:#fff;
+        color:var(--Color1);
+    }
+}   
+
+ 

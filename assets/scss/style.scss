@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:NotoSansGeorgianRegular;
+    max-width:100%;
+} 
+html {
+    overflow-x:hidden;
+} 
+body * {
+    
+} 
+
+@import 'loader'; 
+@import 'fonts'; 
+@import 'variable'; 
+@import 'ui'; 
+@import 'leftpanel'; 
+@import 'home';  
+@import 'footer';  
+
+
+ 
+.panel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.panel-horizontal {
+    overflow: hidden; 
+    background: #fff;
+}
+
+.horizontal-wrapper {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;  
+    padding-bottom:70px;
+}
+.SlideItem {
+    flex: 0 0 auto;
+    margin: 0 15px; 
+    border-radius: 30px; 
+    overflow:hidden;
+}
+

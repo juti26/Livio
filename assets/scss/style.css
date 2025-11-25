@@ -1,0 +1,842 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: NotoSansGeorgianRegular;
+  max-width: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.Loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 99999;
+  display: none;
+}
+.Loader .Background {
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  animation: LeftSlideBG 0.5s ease-out forwards;
+  background: #031B30;
+}
+
+@keyframes LeftSlideBG {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@font-face {
+  font-family: "NotoSansGeorgianSemiBold";
+  src: url("../fonts/NotoSansGeorgian-SemiBold.eot");
+  src: url("../fonts/NotoSansGeorgian-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansGeorgian-SemiBold.woff2") format("woff2"), url("../fonts/NotoSansGeorgian-SemiBold.woff") format("woff"), url("../fonts/NotoSansGeorgian-SemiBold.ttf") format("truetype"), url("../fonts/NotoSansGeorgian-SemiBold.svg#NotoSansGeorgian-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansGeorgianMedium";
+  src: url("../fonts/NotoSansGeorgian-Medium.eot");
+  src: url("../fonts/NotoSansGeorgian-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansGeorgian-Medium.woff2") format("woff2"), url("../fonts/NotoSansGeorgian-Medium.woff") format("woff"), url("../fonts/NotoSansGeorgian-Medium.ttf") format("truetype"), url("../fonts/NotoSansGeorgian-Medium.svg#NotoSansGeorgian-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansGeorgianBold";
+  src: url("../fonts/NotoSansGeorgian-Bold.eot");
+  src: url("../fonts/NotoSansGeorgian-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansGeorgian-Bold.woff2") format("woff2"), url("../fonts/NotoSansGeorgian-Bold.woff") format("woff"), url("../fonts/NotoSansGeorgian-Bold.ttf") format("truetype"), url("../fonts/NotoSansGeorgian-Bold.svg#NotoSansGeorgian-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansGeorgianExtraBold";
+  src: url("../fonts/NotoSansGeorgian-ExtraBold.eot");
+  src: url("../fonts/NotoSansGeorgian-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansGeorgian-ExtraBold.woff2") format("woff2"), url("../fonts/NotoSansGeorgian-ExtraBold.woff") format("woff"), url("../fonts/NotoSansGeorgian-ExtraBold.ttf") format("truetype"), url("../fonts/NotoSansGeorgian-ExtraBold.svg#NotoSansGeorgian-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansGeorgianRegular";
+  src: url("../fonts/NotoSansGeorgian-Regular.eot");
+  src: url("../fonts/NotoSansGeorgian-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansGeorgian-Regular.woff2") format("woff2"), url("../fonts/NotoSansGeorgian-Regular.woff") format("woff"), url("../fonts/NotoSansGeorgian-Regular.ttf") format("truetype"), url("../fonts/NotoSansGeorgian-Regular.svg#NotoSansGeorgian-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --Background1: #001D32;
+  --Background2: #1E293B;
+  --Color1: #1E293B;
+  --MainColor: #BDD3D0;
+  --Secondary: #64A9A0;
+  /* Fonts */
+  --Regular: NotoSansGeorgianRegular;
+  --SemiBold: NotoSansGeorgianSemiBold;
+  --Medium: NotoSansGeorgianMedium;
+  --Bold: NotoSansGeorgianBold;
+  --ExtraBold: NotoSansGeorgianExtraBold;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.ButtonWhite {
+  display: inline-block;
+  height: 56px;
+  line-height: 52px;
+  border-radius: 30px;
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  padding: 0 30px;
+  background: #fff;
+  border: solid var(--MainColor) 1px;
+  transition: 0.3s;
+}
+.ButtonWhite:hover {
+  background: #fff;
+  color: var(--Color1);
+}
+
+.ButtonTransparent {
+  display: inline-block;
+  height: 56px;
+  line-height: 52px;
+  border-radius: 30px;
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  padding: 0 42px;
+  background: rgba(255, 255, 255, 0.2);
+  border: solid rgb(189, 211, 208) 1px;
+  transition: 0.3s;
+}
+.ButtonTransparent:hover {
+  background: #fff;
+  color: var(--Color1);
+}
+
+.LeftPanel {
+  width: 80px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--Background1);
+  text-align: center;
+  padding: 20px 12px 70px 12px;
+  z-index: 9;
+}
+.LeftPanel .Hamburger {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  background: var(--Background2);
+  border: solid rgba(245, 246, 248, 0.2) 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.LeftPanel .Reserve {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  background: var(--Background2);
+  position: absolute;
+  bottom: 156px;
+  left: 12px;
+  border: solid rgba(245, 246, 248, 0.2) 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.LeftPanel .Contact {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  background: var(--Background2);
+  position: absolute;
+  bottom: 70px;
+  left: 12px;
+  border: solid rgba(245, 246, 248, 0.2) 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HomeSection {
+  background: red;
+  width: 100%;
+  height: 100%;
+}
+.HomeSection .Image {
+  width: 100%;
+  height: 100%;
+}
+
+.FirstDIv {
+  width: 300px;
+  height: 100%;
+}
+
+.LastDiv {
+  width: 80px;
+  height: 100%;
+}
+
+.WhyyLivio {
+  display: inline-block;
+  width: 476px;
+  height: 580px;
+  border-radius: 30px;
+  background: #F8F8F5;
+  border: solid rgba(30, 41, 59, 0.5) 1px;
+  padding: 40px 30px;
+}
+.WhyyLivio .Title {
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+  color: var(--Color1);
+  text-align: center;
+  margin-bottom: 60px;
+}
+.WhyyLivio .Content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-2 ზე დაყოფა */
+  gap: 20px; /* აიტემებს შორის დაშორება */
+}
+.WhyyLivio .Content .Item {
+  text-align: center;
+}
+.WhyyLivio .Content .Item .Icon {
+  margin-bottom: 50px;
+}
+.WhyyLivio .Content .Item .Icon img {
+  height: 114px;
+  width: 114px;
+}
+.WhyyLivio .Content .Item .Text {
+  font-family: var(--Bold);
+  font-size: 18px;
+  color: var(--Color1);
+}
+
+.ChooiseApartments {
+  display: inline-block;
+  width: 440px;
+  height: 580px;
+  border-radius: 30px;
+  background: #F8F8F5;
+  border: solid rgba(30, 41, 59, 0.5) 1px;
+  padding: 15px 20px;
+}
+.ChooiseApartments .Title {
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+  color: var(--Color1);
+  text-align: center;
+  margin-bottom: 12px;
+}
+.ChooiseApartments .Text {
+  font-family: var(--Regular);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ChooiseApartments .Image {
+  height: 400px;
+  width: 100%;
+  text-align: center;
+}
+.ChooiseApartments .Image img {
+  height: 100%;
+}
+
+.SmallProjectItem {
+  display: inline-block;
+  width: 1120px;
+  height: 580px;
+  border-radius: 30px;
+  position: relative;
+}
+.SmallProjectItem .Image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.SmallProjectItem .City {
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  left: 60px;
+}
+.SmallProjectItem .Button {
+  height: 56px;
+  line-height: 56px;
+  border-radius: 30px;
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 23px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transition: 0.3s;
+  z-index: 2;
+}
+.SmallProjectItem .Button:hover {
+  background: #fff;
+  color: var(--Color1);
+}
+.SmallProjectItem .Content {
+  position: relative;
+  z-index: 1;
+  padding-left: 60px;
+  padding-top: 100px;
+}
+.SmallProjectItem .Content .Title {
+  font-family: var(--SemiBold);
+  font-size: 78px;
+  color: #fff;
+  line-height: 130%;
+  margin-bottom: 65px;
+}
+.SmallProjectItem .Content .Status span {
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+}
+.SmallProjectItem .Content .Status.Live span {
+  color: #00BE3F;
+}
+.SmallProjectItem .Content .Status .Live {
+  height: 54px;
+  line-height: 52px;
+  border-radius: 30px;
+  background: #FF4646;
+  display: inline-block;
+  padding: 0 15px;
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #fff;
+  margin-left: 30px;
+}
+.SmallProjectItem .Content .Status .Live label {
+  padding-left: 5px;
+}
+@keyframes live-wave {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+@keyframes live-play {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+.SmallProjectItem .Content .Status .Live .LiveSVG {
+  width: 24px;
+  height: 24px;
+}
+.SmallProjectItem .Content .Status .Live .LiveSVG .Wave {
+  opacity: 0.4;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: live-wave 1.2s ease-out infinite;
+}
+.SmallProjectItem .Content .Status .Live .LiveSVG .WaveInner {
+  animation-delay: 0.25s;
+}
+.SmallProjectItem .Content .Status .Live .LiveSVG .Play {
+  animation: live-play 1.2s ease-in-out infinite;
+}
+.SmallProjectItem .Bottom {
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  padding-right: 60px;
+  display: inline-flex;
+  align-items: center;
+}
+.SmallProjectItem .Bottom .Button2 {
+  height: 56px;
+  line-height: 52px;
+  border-radius: 30px;
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 38px;
+  background: rgba(189, 211, 208, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: solid var(--MainColor) 1px;
+  transition: 0.3s;
+}
+.SmallProjectItem .Bottom .Button2:hover {
+  background: #fff;
+  color: var(--Color1);
+}
+.SmallProjectItem .Bottom .Info {
+  padding-left: 50px;
+}
+.SmallProjectItem .Bottom .Info .Item {
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+  width: 240px;
+  text-align: center;
+}
+
+.AllProjectSmall {
+  display: inline-block;
+  width: 476px;
+  height: 580px;
+  border-radius: 30px;
+  background: #F8F8F5;
+  border: solid rgba(30, 41, 59, 0.5) 1px;
+  padding: 15px 0;
+  position: relative;
+}
+.AllProjectSmall .Title {
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+  color: var(--Color1);
+  text-align: center;
+  margin-bottom: 12px;
+  padding: 0 20px;
+}
+.AllProjectSmall .Text {
+  font-family: var(--Regular);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.AllProjectSmall .Image {
+  height: 414px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.AllProjectSmall .Image img {
+  width: 100%;
+  height: 100%;
+}
+.AllProjectSmall .ButtonDiv {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  transition: 0.3s;
+  text-align: center;
+  width: 100%;
+}
+
+.OnlyImageSmall {
+  display: inline-block;
+  width: 490px;
+  height: 580px;
+  border-radius: 30px;
+  background: #F8F8F5;
+}
+
+.ProjectInfoSmall {
+  display: inline-block;
+  width: 1102px;
+  height: 580px;
+  border-radius: 30px;
+  background: #fff;
+  border: solid var(--MainColor) 1px;
+}
+.ProjectInfoSmall .Content {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.ProjectInfoSmall .Content .Info {
+  width: calc(100% - 697px);
+  display: flex;
+  flex-direction: column;
+  padding: 33px;
+}
+.ProjectInfoSmall .Content .Info .Title {
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+  color: #000;
+  position: absolute;
+  top: 30px;
+  left: 33px;
+}
+.ProjectInfoSmall .Content .Info a {
+  position: absolute;
+  bottom: 30px;
+  left: 33px;
+}
+.ProjectInfoSmall .Content .Image {
+  width: 697px;
+  height: 100%;
+}
+.ProjectInfoSmall .Content .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.HomeGallery .row {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+.HomeGallery .TopInfo {
+  margin-bottom: 20px;
+}
+.HomeGallery .TopInfo .Title {
+  color: #000;
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+}
+.HomeGallery .Content .Image {
+  display: inline-block;
+  width: 450px;
+  height: 484px;
+  border-radius: 30px;
+  border: solid var(--MainColor) 1px;
+  margin-right: 15px;
+}
+.HomeGallery .Content .Image:last-child {
+  margin: 0;
+}
+.HomeGallery .Content .Image.Big {
+  width: 600px;
+}
+.HomeGallery .Content .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.TabsDiv {
+  display: inline-flex;
+  height: 580px;
+  border-radius: 30px;
+  background: #fff;
+  border: solid var(--MainColor) 1px;
+  margin-right: 300px;
+}
+.TabsDiv .Left {
+  padding: 24px 40px 24px 30px;
+  width: 410px;
+}
+.TabsDiv .Left .Title {
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 12px;
+  line-height: 130%;
+}
+.TabsDiv .Left .Title.MarginBottom {
+  margin-bottom: 34px;
+}
+.TabsDiv .Left .Text {
+  font-family: var(--Regular);
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 20px;
+  line-height: 130%;
+}
+.TabsDiv .Left .TabNav {
+  width: 100%;
+}
+.TabsDiv .Left .TabNav.MarginBottom {
+  margin-bottom: 70px;
+}
+.TabsDiv .Left .TabNav .nav-tabs {
+  border-bottom: 0;
+  margin-bottom: 10px;
+}
+.TabsDiv .Left .TabNav .nav-link {
+  width: 100%;
+  border: solid var(--MainColor) 1px;
+  height: 62px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  font-family: var(--Bold);
+  color: #000;
+  text-align: left;
+  padding: 0 26px;
+  transition: 0.3s;
+}
+.TabsDiv .Left .TabNav .nav-link.active {
+  border: solid var(--Secondary) 1px;
+  background: #EBF1F0;
+}
+.TabsDiv .Left .TabNav .nav-link:hover {
+  border: solid var(--Secondary) 1px;
+  background: #EBF1F0;
+}
+.TabsDiv .Left .TabNav .nav-link span {
+  float: right;
+  font-family: var(--ExtraBold);
+  font-size: 18px;
+  color: #000;
+  opacity: 0;
+  transition: 0.3s;
+}
+.TabsDiv .Left .TabNav .nav-link.active span {
+  opacity: 1;
+}
+.TabsDiv .Left .TabNav .nav-link label {
+  font-family: var(--ExtraBold);
+}
+.TabsDiv .Right {
+  width: 460px;
+  height: 100%;
+  border-left: solid var(--MainColor) 1px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: relative;
+}
+.TabsDiv .Right .tab-content {
+  height: 100%;
+}
+.TabsDiv .Right .tab-content .tab-pane {
+  height: 100%;
+}
+.TabsDiv .Right .Image {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 12px;
+}
+.TabsDiv .Right .Image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.TabsDiv .Right .BtnDiv {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  z-index: 9;
+  width: 100%;
+  text-align: center;
+}
+.TabsDiv .RightBig {
+  width: 800px;
+  height: 100%;
+  border-left: solid var(--MainColor) 1px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  overflow: hidden;
+}
+.TabsDiv .RightBig .tab-content {
+  height: 100%;
+}
+.TabsDiv .RightBig .tab-content .tab-pane {
+  height: 100%;
+}
+.TabsDiv .RightBig .Image {
+  width: 100%;
+  height: 100%;
+}
+.TabsDiv .RightBig .Image img {
+  width: 100%;
+  height: 100%;
+}
+.TabsDiv.WithBG {
+  background: #F8F8F5;
+  border: solid rgba(30, 41, 59, 0.2) 1px;
+}
+.TabsDiv.WithBG .Right {
+  border: solid rgba(30, 41, 59, 0.2) 1px;
+}
+.TabsDiv.WithBG .Right .Image {
+  padding: 68px;
+}
+
+.FullPage {
+  width: 100%;
+  height: 100%;
+  background: red;
+  border-radius: 0 !important;
+  height: 120vh;
+  position: relative;
+  position: relative;
+}
+.FullPage .Background {
+  width: 100%;
+  height: 100%;
+}
+.FullPage .Background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.FullPage .Content {
+  position: absolute;
+  bottom: 100px;
+  left: 110px;
+  z-index: 9;
+  display: inline-flex;
+}
+.FullPage .Content .ModeIcons {
+  width: 75px;
+  height: 145px;
+  padding: 5px;
+  background: rgba(189, 211, 208, 0.2);
+  border-radius: 10px;
+  border: solid #1E293B 1px;
+  margin-right: 20px;
+}
+.FullPage .Content .ModeIcons .Icon {
+  width: 100%;
+  height: 65px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 65px;
+  cursor: pointer;
+}
+.FullPage .Content .ModeIcons .Icon:first-child {
+  margin-bottom: 5px;
+}
+.FullPage .Content .Info {
+  width: 625px;
+  max-width: 100%;
+  height: 145px;
+  border-radius: 10px;
+  background: rgba(189, 211, 208, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(189, 211, 208);
+  padding: 15px 30px;
+}
+.FullPage .Content .Info .Title {
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  color: #fff;
+}
+
+.Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: var(--Background1);
+  width: 100%;
+  padding: 43px 0px 0px 0;
+}
+.Footer .container-fluid {
+  padding-right: 80px;
+  padding-left: 135px;
+}
+.Footer .Info {
+  border-top: solid #64A9A0 2px;
+  border-bottom: solid #64A9A0 2px;
+  padding: 20px 0;
+  background: url("../img/georgia1.svg") no-repeat;
+  background-position: center right;
+}
+.Footer .Info .Menu .Title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.52;
+  margin-bottom: 15px;
+  font-family: var(--ExtraBold);
+}
+.Footer .Info .Menu ul li {
+  list-style: none;
+}
+.Footer .Info .Menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.52;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-family: var(--Medium);
+  transition: 0.3s;
+}
+.Footer .Info .Menu ul li a:hover {
+  opacity: 1;
+}
+.Footer .CopyRight {
+  padding: 25px 0;
+  width: 100%;
+}
+.Footer .CopyRight .Text {
+  font-family: var(--ExtraBold);
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.52;
+  padding-top: 30px;
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.panel-horizontal {
+  overflow: hidden;
+  background: #fff;
+}
+
+.horizontal-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  padding-bottom: 70px;
+}
+
+.SlideItem {
+  flex: 0 0 auto;
+  margin: 0 15px;
+  border-radius: 30px;
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */

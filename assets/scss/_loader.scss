@@ -1,0 +1,21 @@
+.Loader {
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:#fff; 
+    z-index:99999;
+    display:none;
+    .Background {
+        width:100%;
+        height:100%;
+        transform: translateX(-100%);
+        animation: LeftSlideBG 0.5s ease-out forwards;
+        background:#031B30;
+    }
+}
+
+
+@keyframes LeftSlideBG {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}

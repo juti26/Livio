@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Custom Loader</title>
+<style>
+  /* გვერდი */
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* თავიდან თეთრი ფონი */
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+
+  /* მთლიანი ლოადერის wrapper */
+  .loader-wrapper {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;              /* თეთრი */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loaderFadeOut 0.1s ease forwards;
+    animation-delay: 3.2s;            /* როდის გაქრეს ლოადერი მთლიანად */
+    z-index: 9999;
+  }
+
+  /* მუქი ფონიანი ბლოკი, რომელიც მარცხნიდან შემოდის */
+  .loader-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #021a2b;              /* მუქი ლურჯი/შავი */
+    transform: translateX(-100%);
+    animation: bgSlideIn 0.9s ease-out forwards;
+  }
+
+  /* ცენტრში ბურთი */
+  .loader-ball {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #0ff, #000);
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    transform: scale(0);
+    opacity: 0;
+    animation:
+      ballAppear 0.6s ease-out forwards 0.8s,
+      ballSpin 1.2s linear infinite 1.0s;
+  }
+
+  /* keyframes */
+
+  /* მუქი ფონის შემოსვლა მარცხნიდან */ 
+  @keyframes bgSlideIn {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+
+  /* ბურთის გამოჩენა + გაზრდა */
+  @keyframes ballAppear {
+    0%   { transform: scale(0); opacity: 0; }
+    60%  { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(3); opacity: 1; }
+  }
+
+  /* ბურთის ტრიალი */
+  @keyframes ballSpin {
+    from { transform: scale(1) rotate(0deg); }
+    to   { transform: scale(1) rotate(360deg); }
+  }
+
+  /* ლოადერის გაქრობა (fade + პატარა scale) */
+  @keyframes loaderFadeOut {
+    0%   { opacity: 1; transform: scale(1); pointer-events: all; }
+    100% { opacity: 0; transform: scale(1.02); pointer-events: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="loader-wrapper">
+  <div class="loader-bg">
+    <div class="loader-ball"></div>
+  </div>
+</div>
+
+<!-- ქვემოთ შენი რეალური გვერდის კონტენტი -->
+<div style="padding:40px;">
+  <h1>გვერდის კონტენტი</h1>
+  <p>ეს ტექსტი გამოჩნდება როცა ლოადერი გაქრება.</p>
+</div>
+
+</body>
+</html>

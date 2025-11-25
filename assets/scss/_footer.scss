@@ -1,0 +1,58 @@
+.Footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    background:var(--Background1);
+    width:100%;
+    padding:43px 0px 0px 0;
+    .container-fluid {
+        padding-right:80px;
+        padding-left:135px;
+    }
+    .Info {
+        border-top:solid #64A9A0 2px;
+        border-bottom:solid #64A9A0 2px;
+        padding:20px 0;
+        background:url('../img/georgia1.svg') no-repeat;
+        background-position: center right; 
+        .Menu { 
+            .Title {
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+                opacity:0.52;
+                margin-bottom:15px;
+                font-family:var(--ExtraBold);
+            }
+            ul { 
+                li {
+                    list-style:none;
+                    a {
+                        color:#fff;
+                        text-decoration:none;
+                        font-size:14px;
+                        opacity:0.52;
+                        display:inline-block;
+                        margin-bottom:15px;
+                        font-family:var(--Medium);
+                        transition:0.3s;
+                        &:hover {
+                            opacity:1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .CopyRight {
+        padding:25px 0;
+        width:100%; 
+        .Text {
+            font-family:var(--ExtraBold);
+            font-size:16px;
+            color:#fff;
+            opacity:0.52;
+            padding-top:30px;
+        }
+    }
+}
