@@ -18,6 +18,7 @@ body * {
 @import 'ui'; 
 @import 'leftpanel'; 
 @import 'home';  
+@import 'projects';   
 @import 'footer';  
 
 
@@ -36,7 +37,6 @@ body * {
     display: flex;
     height: 100%;
     align-items: flex-end;  
-    padding-bottom:70px;
 }
 .SlideItem {
     flex: 0 0 auto;

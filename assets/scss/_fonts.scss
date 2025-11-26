@@ -63,3 +63,17 @@
     font-display: swap;
 }
 
+
+@font-face {
+    font-family: 'NotoSansGeorgianBlack';
+    src: url('../fonts/NotoSansGeorgian-Black.eot');
+    src: url('../fonts/NotoSansGeorgian-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSansGeorgian-Black.woff2') format('woff2'),
+        url('../fonts/NotoSansGeorgian-Black.woff') format('woff'),
+        url('../fonts/NotoSansGeorgian-Black.svg#NotoSansGeorgian-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+

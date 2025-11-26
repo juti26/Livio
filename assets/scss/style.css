@@ -75,6 +75,14 @@ html {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "NotoSansGeorgianBlack";
+  src: url("../fonts/NotoSansGeorgian-Black.eot");
+  src: url("../fonts/NotoSansGeorgian-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansGeorgian-Black.woff2") format("woff2"), url("../fonts/NotoSansGeorgian-Black.woff") format("woff"), url("../fonts/NotoSansGeorgian-Black.svg#NotoSansGeorgian-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --Background1: #001D32;
   --Background2: #1E293B;
@@ -87,6 +95,7 @@ html {
   --Medium: NotoSansGeorgianMedium;
   --Bold: NotoSansGeorgianBold;
   --ExtraBold: NotoSansGeorgianExtraBold;
+  --Black: NotoSansGeorgianBlack;
 }
 
 ul {
@@ -102,6 +111,7 @@ ul {
   font-family: var(--SemiBold);
   font-size: 18px;
   color: #000000;
+  text-align: center;
   text-decoration: none;
   padding: 0 30px;
   background: #fff;
@@ -128,6 +138,27 @@ ul {
   transition: 0.3s;
 }
 .ButtonTransparent:hover {
+  background: #fff;
+  color: var(--Color1);
+}
+
+.Button2 {
+  height: 56px;
+  line-height: 52px;
+  border-radius: 30px;
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 38px;
+  background: rgba(189, 211, 208, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: solid var(--MainColor) 1px;
+  transition: 0.3s;
+}
+.Button2:hover {
   background: #fff;
   color: var(--Color1);
 }
@@ -395,25 +426,6 @@ ul {
   padding-right: 60px;
   display: inline-flex;
   align-items: center;
-}
-.SmallProjectItem .Bottom .Button2 {
-  height: 56px;
-  line-height: 52px;
-  border-radius: 30px;
-  font-family: var(--SemiBold);
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  padding: 0 38px;
-  background: rgba(189, 211, 208, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: solid var(--MainColor) 1px;
-  transition: 0.3s;
-}
-.SmallProjectItem .Bottom .Button2:hover {
-  background: #fff;
-  color: var(--Color1);
 }
 .SmallProjectItem .Bottom .Info {
   padding-left: 50px;
@@ -753,18 +765,216 @@ ul {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgb(189, 211, 208);
-  padding: 15px 30px;
+  padding: 10px 30px 15px 30px;
 }
 .FullPage .Content .Info .Title {
   font-family: var(--SemiBold);
   font-size: 24px;
   color: #fff;
+  margin-bottom: 12px;
+}
+.FullPage .Content .Info .Text {
+  font-family: var(--SemiBold);
+  font-size: 14px;
+  color: #fff;
+  line-height: 17px;
+}
+
+.BlogSection {
+  padding: 0 15px 0 90px;
+}
+.BlogSection .SectionTitle {
+  font-family: var(--ExtraBold);
+  font-size: 54px;
+  color: var(--Color1);
+  width: 900px;
+  max-width: 100%;
+  line-height: 64px;
+  margin: 90px 0 100px 80px;
+}
+.BlogSection .BlogDiv {
+  padding-left: 100px;
+  border: solid rgba(30, 41, 59, 0.5) 1px;
+  padding: 20px 30px;
+  border-radius: 30px;
+  margin-bottom: 70px;
+}
+.BlogSection .BlogDiv .Head .Title {
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+  color: var(--Color1);
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.BlogSection .BlogDiv .Head .Text {
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: #000;
+  line-height: 17px;
+  max-width: 540px;
+}
+.BlogSection .BlogDiv .Content {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+.BlogSection .BlogDiv .Content .Item {
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.BlogSection .BlogDiv .Content .Item .ButtonWhite {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+}
+.BlogSection .BlogDiv .Content .Item .Image {
+  width: 100%;
+  height: 100%;
+}
+.BlogSection .BlogDiv .Content .Item .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.BlogSection .BlogDiv .Content .Item .Title {
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  padding-right: 30px;
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  color: #000;
+  line-height: 28px;
+  z-index: 1;
+}
+.BlogSection .BlogDiv .Content .Item .Gradient {
+  width: 100%;
+  height: 132px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: linear-gradient(180deg, rgba(237, 234, 224, 0) 0%, rgb(237, 234, 224) 54%, rgb(237, 234, 224) 100%);
+  border-radius: 10px;
+}
+
+.ProjectsDiv {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  background: var(--Background1);
+  padding-top: 70px;
+}
+.ProjectsDiv .Head {
+  position: relative;
+  height: 210px;
+}
+.ProjectsDiv .Head:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 29, 50, 0) 0%, rgb(0, 29, 50) 100%);
+}
+.ProjectsDiv .Head .Title {
+  font-family: var(--Black);
+  font-size: 165px;
+  width: 100%;
+  text-align: center;
+  color: #64A9A0;
+  line-height: 196px;
+  position: relative;
+}
+.ProjectsDiv .Project {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+}
+.ProjectsDiv .Project .Image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ProjectsDiv .Project .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ProjectsDiv .Project .Info {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+.ProjectsDiv .Project .Info .Number {
+  font-family: var(--ExtraBold);
+  font-size: 34px;
+  line-height: 40px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.ProjectsDiv .Project .Info .City {
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  line-height: 28px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.ProjectsDiv .Project .Info .Name {
+  font-family: var(--SemiBold);
+  font-size: 78px;
+  line-height: 92px;
+  color: #fff;
+  width: 100px;
+  margin-bottom: 40px;
+}
+.ProjectsDiv .Project .Info .Status {
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  line-height: 28px;
+  color: #00BE3F;
+  margin-bottom: 100px;
+}
+.ProjectsDiv .Project .Info .Bottom {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+.ProjectsDiv .Project .Info .Bottom .ButtonWhite {
+  min-width: 200px;
+}
+.ProjectsDiv .Project .Info .Bottom .Info {
+  width: 100%;
+}
+.ProjectsDiv .Project .Info .Bottom .Info .Item {
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+  width: 240px;
+  text-align: center;
 }
 
 .Footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  display: inline-block;
   background: var(--Background1);
   width: 100%;
   padding: 43px 0px 0px 0;
@@ -831,7 +1041,6 @@ ul {
   display: flex;
   height: 100%;
   align-items: flex-end;
-  padding-bottom: 70px;
 }
 
 .SlideItem {

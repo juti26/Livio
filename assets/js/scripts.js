@@ -9,11 +9,11 @@ function makeHorizontalScroll(sectionSelector) {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "top+=1 top",      // ← რბილი start
+      start: "top+=1 top", 
       end: () => "+=" + getScrollWidth(),
       pin: true,
       pinSpacing: true,
-      scrub: 1.2,               // ← inertia, smooth transition
+      scrub: 1.2, 
       anticipatePin: 1,
       invalidateOnRefresh: true
     }

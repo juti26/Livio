@@ -9,6 +9,7 @@
     font-family:var(--SemiBold);
     font-size:18px;
     color:#000000;
+    text-align:center;
     text-decoration:none;
     padding:0 30px;
     background:#fff;  
@@ -39,5 +40,28 @@
         color:var(--Color1);
     }
 }   
+
+
+
+.Button2 {
+    height:56px;
+    line-height:52px;
+    border-radius:30px;
+    font-family:var(--SemiBold);
+    font-size:18px;
+    color:#fff;
+    text-align:center;
+    text-decoration:none;
+    padding:0 38px;
+    background:rgba(189,211,208,0.2); 
+    backdrop-filter: blur(10px);  
+    -webkit-backdrop-filter: blur(10px);
+    border:solid var(--MainColor) 1px; 
+    transition:0.3s;
+    &:hover {
+        background:#fff;
+        color:var(--Color1);
+    }
+}
 
  

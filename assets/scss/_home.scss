@@ -211,25 +211,7 @@
         padding-right:60px;
         display:inline-flex;
         align-items:center;
-        .Button2 {
-            height:56px;
-            line-height:52px;
-            border-radius:30px;
-            font-family:var(--SemiBold);
-            font-size:18px;
-            color:#fff;
-            text-decoration:none;
-            padding:0 38px;
-            background:rgba(189,211,208,0.2); 
-            backdrop-filter: blur(10px);  
-            -webkit-backdrop-filter: blur(10px);
-            border:solid var(--MainColor) 1px;
-            transition:0.3s;
-            &:hover {
-                background:#fff;
-                color:var(--Color1);
-            }
-        }
+        
         .Info {
             padding-left:50px;
             .Item {
@@ -579,13 +561,112 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px); 
             border: 1px solid rgba(189, 211, 208, 1);
-            padding:15px 30px;
+            padding:10px 30px 15px 30px;
             .Title {
                 font-family:var(--SemiBold);
                 font-size:24px;
                 color:#fff;
+                margin-bottom:12px;
+            }
+            .Text {
+                font-family:var(--SemiBold);
+                font-size:14px; 
+                color:#fff;
+                line-height:17px;
             }
         }
-    }
-
+    } 
 } 
+
+
+.BlogSection {
+    .SectionTitle {
+        font-family:var(--ExtraBold);
+        font-size:54px;
+        color:var(--Color1);
+        width:900px;
+        max-width:100%;
+        line-height:64px;
+        margin:90px 0 100px 80px;
+    }
+    padding:0 15px 0 90px;
+    .BlogDiv {
+        padding-left:100px;
+        border:solid rgba(30,41,59,0.5) 1px;
+        padding:20px 30px;
+        border-radius:30px;
+        margin-bottom:70px;
+        .Head {
+            .Title {
+                font-family:var(--ExtraBold);
+                font-size:24px;
+                color:var(--Color1);
+                line-height:28px; 
+                margin-bottom:20px;
+            }
+            .Text {
+                font-family:var(--Regular);
+                font-size:14px;
+                color:#000;
+                line-height:17px;
+                max-width:540px;
+            }
+        }
+        .Content {
+            display:inline-block;
+            width:100%;
+            margin-top:20px;
+            .Item {
+                display:inline-block;
+                width:100%;
+                height:400px;
+                border-radius:30px;
+                position:relative;
+                overflow:hidden;
+                .ButtonWhite {
+                    position:absolute;
+                    top:20px;
+                    left:20px;
+                    background:rgba(255,255,255,0.8);
+                    border:none;
+                }
+                .Image {
+                    width:100%;
+                    height:100%;
+                    img {
+                        width:100%;
+                        height:100%;
+                        object-fit:cover;
+                    }
+                } 
+                .Title {
+                    width:100%;
+                    position:absolute;
+                    bottom:25px;
+                    left:30px;
+                    padding-right:30px;
+                    font-family:var(--SemiBold);
+                    font-size:24px;
+                    color:#000;
+                    line-height:28px;
+                    z-index:1;
+                }
+                .Gradient {
+                    width:100%;
+                    height:132px;
+                    position:absolute;
+                    bottom:0px;
+                    left:0;
+                    background: linear-gradient(
+                    180deg,
+                        rgba(237, 234, 224, 0) 0%,   /* 0%  EDEAE0 0%   */
+                        rgba(237, 234, 224, 1) 54%,  /* 54% EDEAE0 100% */
+                        rgba(237, 234, 224, 1) 100%  /* 100% EDEAE0 100% */
+                    ); 
+                    border-radius:10px;
+                }
+            }
+        } 
+    }
+}
+ 
