@@ -982,32 +982,44 @@ ul {
   text-align: center;
 }
 
+.AboutLineBG {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 160px;
+  background: var(--Background1);
+}
+
 .AboutDiv {
   display: inline-block;
   float: left;
   width: 100%;
   background: #edeae0;
 }
-.AboutDiv .FullDiv {
+
+.FullDiv {
   display: inline-block;
   float: left;
   width: 100%;
   height: 100vh;
 }
-.AboutDiv .FullDiv .Image {
+.FullDiv .container {
+  height: 100%;
+}
+.FullDiv .Image {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-.AboutDiv .FullDiv .Image img {
+.FullDiv .Image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.AboutDiv .FullDiv .Content {
+.FullDiv .Content {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -1016,34 +1028,37 @@ ul {
   align-items: center;
   text-align: center;
 }
-.AboutDiv .FullDiv .Content .Info {
+.FullDiv .Content .Info {
   width: 100%;
   text-align: center;
 }
-.AboutDiv .FullDiv .Content .Info .Title {
+.FullDiv .Content .Info .BigTitle {
   text-align: center;
   margin-bottom: 50px;
 }
-.AboutDiv .FullDiv .Content .Info .Title span {
+.FullDiv .Content .Info .BigTitle span {
+  font-family: var(--Black);
+  font-size: 150px;
+  line-height: 65px;
+  color: #fff;
+  display: inline-block;
+}
+.FullDiv .Content .Info .Title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.FullDiv .Content .Info .Title span {
   font-family: var(--Black);
   font-size: 55px;
   line-height: 65px;
   color: #fff;
-  width: 300px;
   display: inline-block;
 }
-.AboutDiv .FullDiv .Content .Info .Text {
+.FullDiv .Content .Info .Text {
   font-family: var(--Black);
   font-size: 25px;
   color: #fff;
   line-height: 30px;
-}
-.AboutDiv .Background {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: 160px;
-  background: var(--Background1);
 }
 
 .TextAndImage {
@@ -1106,6 +1121,84 @@ ul {
   font-size: 18px;
   color: #000;
   line-height: 30px;
+}
+
+.AboutBuilding .TextAndImage2 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 140px;
+}
+.AboutBuilding .TextAndImage2 .row {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+.AboutBuilding .TextAndImage2 .ParentImage {
+  position: relative;
+}
+.AboutBuilding .TextAndImage2 .ParentImage:after {
+  position: absolute;
+  bottom: 0;
+  right: 90%;
+  content: "";
+  width: 500px;
+  height: 161px;
+  background: var(--Background1);
+}
+.AboutBuilding .TextAndImage2 .Image {
+  width: 100%;
+  height: 827px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.AboutBuilding .TextAndImage2 .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.AboutBuilding .TextAndImage2 .Info {
+  display: inline-block;
+  width: 100%;
+  padding-left: 30px;
+}
+.AboutBuilding .TextAndImage2 .Info .Title {
+  font-family: var(--ExtraBold);
+  font-size: 64px;
+  line-height: 76px;
+  color: var(--Color1);
+  width: 400px;
+  margin-bottom: 60px;
+}
+.AboutBuilding .TextAndImage2 .Info .List .Item {
+  display: inline-flex;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.AboutBuilding .TextAndImage2 .Info .List .Item:last-child {
+  margin: 0;
+}
+.AboutBuilding .TextAndImage2 .Info .List .Item .Number {
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--Color1);
+  margin-right: 34px;
+}
+.AboutBuilding .TextAndImage2 .Info .List .Item .Text {
+  font-family: var(--SemiBold);
+  font-size: 34px;
+  line-height: 40px;
+  color: var(--Color1);
+}
+.AboutBuilding .TextAndImage2 .Info .List .Item .Text span {
+  font-family: var(--ExtraBold);
 }
 
 .AboutList {
