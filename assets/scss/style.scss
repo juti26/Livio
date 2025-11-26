@@ -8,9 +8,14 @@
 html {
     overflow-x:hidden;
 } 
-body * {
-    
+body {
+    padding-left:80px;
 } 
+
+.container {
+    width:1500px;
+    max-width:85%;
+}
 
 @import 'loader'; 
 @import 'fonts'; 
@@ -19,6 +24,7 @@ body * {
 @import 'leftpanel'; 
 @import 'home';  
 @import 'projects';   
+@import 'about_us';   
 @import 'footer';  
 
 
@@ -37,6 +43,7 @@ body * {
     display: flex;
     height: 100%;
     align-items: flex-end;  
+    padding-bottom:70px;
 }
 .SlideItem {
     flex: 0 0 auto;

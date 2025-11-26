@@ -11,6 +11,15 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  padding-left: 80px;
+}
+
+.container {
+  width: 1500px;
+  max-width: 85%;
+}
+
 .Loader {
   width: 100%;
   height: 100%;
@@ -973,6 +982,180 @@ ul {
   text-align: center;
 }
 
+.AboutDiv {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  background: #edeae0;
+}
+.AboutDiv .FullDiv {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 100vh;
+}
+.AboutDiv .FullDiv .Image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.AboutDiv .FullDiv .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.AboutDiv .FullDiv .Content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: inline-grid;
+  align-items: center;
+  text-align: center;
+}
+.AboutDiv .FullDiv .Content .Info {
+  width: 100%;
+  text-align: center;
+}
+.AboutDiv .FullDiv .Content .Info .Title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.AboutDiv .FullDiv .Content .Info .Title span {
+  font-family: var(--Black);
+  font-size: 55px;
+  line-height: 65px;
+  color: #fff;
+  width: 300px;
+  display: inline-block;
+}
+.AboutDiv .FullDiv .Content .Info .Text {
+  font-family: var(--Black);
+  font-size: 25px;
+  color: #fff;
+  line-height: 30px;
+}
+.AboutDiv .Background {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 160px;
+  background: var(--Background1);
+}
+
+.TextAndImage {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 140px;
+}
+.TextAndImage .row {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+.TextAndImage .ImageDiv {
+  position: relative;
+  height: 600px;
+  width: 1200px;
+  max-width: 1200px;
+  border-radius: 30px;
+  float: right;
+  overflow: hidden;
+  overflow: hidden;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
+}
+.TextAndImage .ImageDiv.Right {
+  float: right;
+}
+.TextAndImage .ImageDiv.Left {
+  float: left;
+}
+.TextAndImage .ImageDiv .Image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.TextAndImage .ImageDiv .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.TextAndImage .Info {
+  display: inline-block;
+  width: 100%;
+}
+.TextAndImage .Info.TextLeft {
+  padding-right: 40px;
+}
+.TextAndImage .Info.TextRight {
+  padding-left: 40px;
+}
+.TextAndImage .Info .Title {
+  font-family: var(--Bold);
+  font-size: 34px;
+  color: #000;
+  line-height: 40px;
+  margin-bottom: 50px;
+}
+.TextAndImage .Info .Text {
+  font-family: var(--Regular);
+  font-size: 18px;
+  color: #000;
+  line-height: 30px;
+}
+
+.AboutList {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 90px;
+}
+.AboutList .Item {
+  display: inline-flex;
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: solid var(--MainColor) 1px;
+}
+.AboutList .Item .Number {
+  font-family: var(--SemiBold);
+  font-size: 34px;
+  line-height: 40px;
+  color: var(--Secondary);
+  margin-right: 35px;
+  padding-top: 10px;
+}
+.AboutList .Item .Name {
+  font-family: var(--SemiBold);
+  font-size: 54px;
+  line-height: 64px;
+  color: var(--Color1);
+}
+
+.AboutGallery {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.AboutGallery .Item {
+  display: inline-block;
+  width: 100%;
+}
+.AboutGallery .Item .Image {
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.AboutGallery .Item .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .Footer {
   display: inline-block;
   background: var(--Background1);
@@ -1041,6 +1224,7 @@ ul {
   display: flex;
   height: 100%;
   align-items: flex-end;
+  padding-bottom: 70px;
 }
 
 .SlideItem {
