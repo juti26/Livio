@@ -580,6 +580,7 @@
 
 
 .BlogSection {
+    padding:0 15px 0 90px;
     .SectionTitle {
         font-family:var(--ExtraBold);
         font-size:54px;
@@ -589,7 +590,6 @@
         line-height:64px;
         margin:90px 0 100px 80px;
     }
-    padding:0 15px 0 90px;
     .BlogDiv {
         padding-left:100px;
         border:solid rgba(30,41,59,0.5) 1px;

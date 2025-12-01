@@ -1,0 +1,42 @@
+.FootContact {
+    padding:40px 0 50px 0;
+    background:url('../img/contact_bg_1.png'); 
+    margin-bottom:200px;
+    .Title {
+        font-family:var(--Black);
+        font-size:84px;
+        color:var(--Color1);
+        line-height:100px;
+        margin-bottom:40px;
+        text-align:center;
+    }
+    .Phone {
+        font-family:var(--ExtraBold);
+        font-size:64px;
+        color:var(--Color1);
+        line-height:76px;
+        margin-bottom:60px;
+        text-align:center;
+        display:block;
+        text-decoration:none;
+    }
+    .Social {
+        text-align:center;
+        .Telegram {
+            font-family:var(--Bold);
+            font-size:44px;
+            color:#297FD0;
+            line-height:52px;
+            text-decoration:none;
+            margin-right:170px;
+        }
+        .Whatsapp {
+            font-family:var(--Bold);
+            font-size:44px;
+            color:#00BE3F;
+            line-height:52px;
+            text-decoration:none;
+            margin-left:170px;
+        }
+    }
+}

@@ -11,10 +11,6 @@ html {
   overflow-x: hidden;
 }
 
-body {
-  padding-left: 80px;
-}
-
 .container {
   width: 1500px;
   max-width: 85%;
@@ -997,6 +993,13 @@ ul {
   background: #edeae0;
 }
 
+.AboutTitle {
+  font-family: var(--ExtraBold);
+  font-size: 64px;
+  line-height: 76px;
+  color: var(--Color1);
+}
+
 .FullDiv {
   display: inline-block;
   float: left;
@@ -1247,6 +1250,209 @@ ul {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.ApartVariation .row {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.AboutTab {
+  width: 500px;
+  max-width: 100%;
+}
+.AboutTab.MarginBottom {
+  margin-bottom: 70px;
+}
+.AboutTab .nav-tabs {
+  border-bottom: 0;
+  margin-bottom: 10px;
+}
+.AboutTab .nav-link {
+  width: 100%;
+  border: none;
+  border-bottom: solid var(--MainColor) 1px;
+  height: 100px;
+  font-family: var(--ExtraBold);
+  font-size: 42px;
+  color: var(--Color1);
+  text-align: left;
+  transition: 0.3s;
+  padding-left: 0;
+}
+.AboutTab .nav-link:last-child {
+  border-bottom: 0 !important;
+}
+.AboutTab .nav-link.active {
+  border: none;
+  border-bottom: solid var(--MainColor) 1px;
+}
+.AboutTab .nav-link:hover {
+  border: none;
+  border-bottom: solid var(--MainColor) 1px;
+  background: transparent;
+}
+.AboutTab .nav-link span {
+  float: right;
+  font-family: var(--ExtraBold);
+  font-size: 24px;
+  color: #000;
+  opacity: 0;
+  transition: 0.3s;
+  margin-top: 14px;
+}
+.AboutTab .nav-link.active span {
+  opacity: 1;
+}
+.AboutTab .nav-link label {
+  font-family: var(--ExtraBold);
+}
+
+.AboutTabContent img {
+  height: 600px;
+}
+
+.Aboutstructure {
+  display: inline-block;
+  width: 100%;
+  margin-top: 90px;
+  margin-bottom: 70px;
+}
+.Aboutstructure .row {
+  margin-left: 0;
+}
+.Aboutstructure .row .Left {
+  padding-left: 0;
+}
+.Aboutstructure .row .Right {
+  padding-right: 0;
+}
+.Aboutstructure .Content {
+  display: inline-block;
+  width: 100%;
+  margin-top: 90px;
+  background: var(--Background1);
+  border-radius: 30px;
+  position: relative;
+}
+.Aboutstructure .Content:after {
+  content: "";
+  width: 1000px;
+  height: 100%;
+  position: absolute;
+  left: calc(100% - 50px);
+  top: 0;
+  background: var(--Background1);
+}
+.Aboutstructure .Content .Image {
+  width: 100%;
+  height: 460px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.Aboutstructure .Content .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.WhyLivio {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 70px;
+}
+.WhyLivio .Content {
+  background: var(--Background1);
+  border-radius: 30px;
+  margin-top: 70px;
+  position: relative;
+}
+.WhyLivio .Content:after {
+  content: "";
+  width: 1000px;
+  height: 100%;
+  position: absolute;
+  left: calc(100% - 50px);
+  top: 0;
+  background: var(--Background1);
+}
+.WhyLivio .Content .row {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+.WhyLivio .Content .Image {
+  width: 100%;
+  height: 100%;
+}
+.WhyLivio .Content .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.WhyLivio .Content .Info {
+  padding-left: 35px;
+}
+.WhyLivio .Content .Info .Item {
+  font-family: var(--ExtraBold);
+  font-size: 42px;
+  color: #fff;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.WhyLivio .Content .Info .Item:first-child {
+  margin-top: 0;
+}
+.WhyLivio .Content .Info .Item:last-child {
+  margin-bottom: 0;
+}
+
+.FootContact {
+  padding: 40px 0 50px 0;
+  background: url("../img/contact_bg_1.png");
+  margin-bottom: 200px;
+}
+.FootContact .Title {
+  font-family: var(--Black);
+  font-size: 84px;
+  color: var(--Color1);
+  line-height: 100px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.FootContact .Phone {
+  font-family: var(--ExtraBold);
+  font-size: 64px;
+  color: var(--Color1);
+  line-height: 76px;
+  margin-bottom: 60px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+.FootContact .Social {
+  text-align: center;
+}
+.FootContact .Social .Telegram {
+  font-family: var(--Bold);
+  font-size: 44px;
+  color: #297FD0;
+  line-height: 52px;
+  text-decoration: none;
+  margin-right: 170px;
+}
+.FootContact .Social .Whatsapp {
+  font-family: var(--Bold);
+  font-size: 44px;
+  color: #00BE3F;
+  line-height: 52px;
+  text-decoration: none;
+  margin-left: 170px;
 }
 
 .Footer {

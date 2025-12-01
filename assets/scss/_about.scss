@@ -10,15 +10,22 @@
 .AboutDiv {
     display:inline-block;
     float:left;
-    width:100%;
+    width:100%; 
     background:#edeae0;
     
 }
 
+.AboutTitle {
+    font-family:var(--ExtraBold);
+    font-size:64px;
+    line-height:76px;
+    color:var(--Color1);
+}
+ 
 
 .FullDiv {
     display:inline-block;
-    float:left;
+    float:left; 
     width:100%;
     height:100vh;
     .container {
@@ -268,6 +275,179 @@
                 height:100%;
                 object-fit:cover;
             }
+        }
+    }
+}
+
+
+
+.ApartVariation {
+    .row {
+        display:inline-flex;
+        align-items:center;
+        width:100%;
+    }
+}
+
+
+
+.AboutTab {
+    width:500px;
+    max-width:100%;
+    &.MarginBottom {
+        margin-bottom:70px;
+    }
+    .nav-tabs {
+        border-bottom:0;
+        margin-bottom:10px;
+    }
+    .nav-link {
+        width:100%;
+        border:none;
+        border-bottom:solid var(--MainColor) 1px;
+        height:100px; 
+        font-family:var(--ExtraBold); 
+        font-size:42px;
+        color:var(--Color1);
+        text-align:left;
+        transition:0.3s;
+        padding-left:0;
+        &:last-child {
+            border-bottom:0 !important;
+        }
+        &.active {
+            border:none;
+            border-bottom:solid var(--MainColor) 1px; 
+        }
+        &:hover {
+            border:none; 
+            border-bottom:solid var(--MainColor) 1px;
+            background:transparent;
+        }
+        span {
+            float:right;
+            font-family:var(--ExtraBold);
+            font-size:24px;
+            color:#000;
+            opacity:0;
+            transition:0.3s;
+            margin-top: 14px;
+
+        } 
+        &.active {
+            span {
+                opacity:1; 
+            }
+        }
+        label {
+            font-family:var(--ExtraBold);
+        }
+    }
+}
+
+.AboutTabContent {
+    img {
+        height:600px;
+    }
+}
+
+
+
+.Aboutstructure {
+    display:inline-block;
+    width:100%;
+    margin-top:90px;
+    margin-bottom:70px;
+    .row {
+        margin-left:0; 
+        .Left {
+            padding-left:0;
+        }
+        .Right {
+            padding-right:0;
+        }
+    }
+    .Content {
+        display:inline-block;
+        width:100%;
+        margin-top:90px;
+        background:var(--Background1);
+        border-radius:30px;
+        position:relative;
+        &:after {
+            content:'';
+            width:1000px;
+            height:100%;
+            position:absolute;
+            left:calc(100% - 50px);
+            top:0;
+            background:var(--Background1);
+        }
+        .Image {
+            width:100%;
+            height:460px;
+            border-radius:30px;
+            overflow:hidden;
+            position:relative;
+            z-index:1;
+            img {
+                width:100%;
+                height:100%;
+                object-fit:cover;
+            }
+        }
+    }
+}
+
+
+
+.WhyLivio {
+    display: inline-block;
+    width:100%;
+    margin-bottom:70px;
+    .Content {
+        background:var(--Background1);
+        border-radius:30px;
+        margin-top:70px;
+        position:relative;
+        &:after {
+            content:'';
+            width:1000px;
+            height:100%;
+            position:absolute;
+            left:calc(100% - 50px);
+            top:0;
+            background:var(--Background1);
+        }
+        .row {
+            display:inline-flex;
+            align-items:center;
+            width:100%;
+        }
+        .Image {
+            width:100%;
+            height:100%;
+            img {
+                width:100%;
+                height:100%;
+                object-fit:cover;
+            }
+        }
+        .Info {
+            padding-left:35px;
+            .Item {
+                font-family:var(--ExtraBold);
+                font-size:42px;
+                color:#fff;
+                margin-top:90px;
+                margin-bottom:90px; 
+                &:first-child {
+                    margin-top:0;
+                }
+                &:last-child {
+                    margin-bottom:0;
+                }
+            } 
         }
     }
 }
