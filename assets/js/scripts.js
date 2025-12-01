@@ -1,3 +1,13 @@
+$(document).ready(function() {		
+    $('.Hamburger').click(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        $('body').toggleClass('ShowMenu');
+    }); 
+}); 
+
+
+
 function makeHorizontalScroll(sectionSelector) {
   const section = document.querySelector(sectionSelector);
   const wrapper = section.querySelector(".horizontal-wrapper");
@@ -28,7 +38,7 @@ makeHorizontalScroll("#horizontal-3");
 
 
 const lenis = new Lenis({
-  duration: 1.5,      // რაც უფრო დიდი, მით უფრო ნელა/რბილად სქროლავს
+  duration: 1.5,  
   smoothWheel: true,
   smoothTouch: false
 });
@@ -38,7 +48,7 @@ lenis.on('scroll', () => {
 });
 
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000); // GSAP-ის დრო → Lenis
+  lenis.raf(time * 1000); 
 });
 
-gsap.ticker.lagSmoothing(0);
+gsap.ticker.lagSmoothing(0); 

@@ -185,10 +185,10 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
   background: var(--Background1);
   text-align: center;
   padding: 20px 12px 70px 12px;
-  z-index: 9;
 }
 .LeftPanel .Hamburger {
   cursor: pointer;
@@ -230,14 +230,111 @@ ul {
   justify-content: center;
 }
 
+.MainMenu {
+  width: 932px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -932px;
+  z-index: 99;
+  background: #FAF9F6 url("../img/main_image_bg_1.png") no-repeat center bottom;
+  box-shadow: 20px 0 50px 0 rgba(30, 41, 59, 0.1);
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 23px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.MainMenu .Top {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.MainMenu .Top .ButtonWhite {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.MainMenu .Menu ul li {
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+  margin: 20px 0;
+}
+.MainMenu .Menu ul li a {
+  font-family: var(--ExtraBold);
+  font-size: 54px;
+  color: var(--Color1);
+  line-height: 64px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.MainMenu .Menu ul li a:hover {
+  letter-spacing: 4px;
+  opacity: 0.5;
+  padding-left: 10px;
+}
+.MainMenu .Bottom {
+  display: inline-flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 70px;
+  left: 80px;
+}
+.MainMenu .Bottom .Contact {
+  display: inline-block;
+  width: 300px;
+  max-width: 100%;
+}
+.MainMenu .Bottom .Contact a {
+  display: inline-block;
+  width: 100%;
+  font-family: var(--Medium);
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--Color1);
+  text-decoration: none;
+  margin-bottom: 34px;
+  transition: 0.3s;
+}
+.MainMenu .Bottom .Contact a:last-child {
+  margin-bottom: 0;
+}
+.MainMenu .Bottom .Contact a:hover {
+  opacity: 0.7;
+}
+.MainMenu .Bottom .Social a {
+  font-family: var(--Medium);
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--Color1);
+  text-decoration: none;
+  opacity: 0.4;
+  transition: 0.3s;
+  margin-right: 40px;
+}
+.MainMenu .Bottom .Social a:hover {
+  opacity: 1;
+}
+
+.ShowMenu .MainMenu {
+  left: 80px;
+  opacity: 1;
+  visibility: visible;
+}
+
 .HomeSection {
-  background: red;
   width: 100%;
   height: 100%;
 }
 .HomeSection .Image {
   width: 100%;
   height: 100%;
+}
+.HomeSection .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .FirstDIv {
