@@ -13,8 +13,8 @@ body {
 } 
 
 .container {
-    width:1500px;
-    max-width:85%;
+    width:1560px;
+    max-width:98%;
 }
 
 @import 'loader'; 
@@ -27,6 +27,7 @@ body {
 @import 'projects';   
 @import 'about';   
 @import 'page';    
+@import 'favorites';    
 @import 'contact';   
 @import 'footer';  
 
