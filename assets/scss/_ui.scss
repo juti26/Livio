@@ -64,4 +64,80 @@
     }
 }
 
+.ButtonOrange {
+    height:56px;
+    line-height:52px;
+    width:100%;
+    border-radius:30px;
+    font-family:var(--Medium);
+    font-size:24px;
+    color:#082032;
+    text-align:center;
+    text-decoration:none;
+    padding:0 38px;
+    background:#F1C247;   
+    transition:0.3s;
+    border:none;
+}
+
+
+.form-control {
+    width:100%;
+    height:62px;
+    border-radius:30px;
+    border:solid rgba(189,211,208,0.5) 1px;
+    margin-bottom:15px;
+    padding-left:20px;
+    transition:0.3s;
+    background:#F7F8FA;
+}
+.form-control:focus {
+    border:solid rgba(30, 41, 59, 0.4) 1px;
+    box-shadow:none;
+}
+textarea.form-control {
+    height:245px;
+    resize:none;
+    padding-top:20px;
+}
  
+.form-control::placeholder {
+    color:rgba(30,41,59,0.5);
+} 
+.form-control::-webkit-input-placeholder {
+    color:rgba(30,41,59,0.5);
+} 
+.form-control.form-control::-moz-placeholder {
+   color:rgba(30,41,59,0.5);
+} 
+.form-control:-ms-input-placeholder {
+    color:rgba(30,41,59,0.5);
+} 
+.form-control:-moz-placeholder {
+    color:rgba(30,41,59,0.5);
+}
+.form-group {
+    position:relative;
+}
+.InputGroup {
+    
+}
+.InputGroup .form-control {
+    padding-left:110px;
+}
+.InputNumber {
+    border-radius:30px;
+    height:100%;
+    line-height:62px;
+    background:#F7F8FA;
+    width:auto;
+    font-family:var(--Regular);
+    font-size:18px;
+    color:var(--Color1);
+    position:absolute;
+    top:0;
+    left:0;
+    color:rgba(30,41,59,0.5);
+    border:solid rgba(189,211,208,0.5) 1px;
+    padding:0 26px;
+}

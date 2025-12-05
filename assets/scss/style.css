@@ -179,6 +179,93 @@ ul {
   color: var(--Color1);
 }
 
+.ButtonOrange {
+  height: 56px;
+  line-height: 52px;
+  width: 100%;
+  border-radius: 30px;
+  font-family: var(--Medium);
+  font-size: 24px;
+  color: #082032;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 38px;
+  background: #F1C247;
+  transition: 0.3s;
+  border: none;
+}
+
+.form-control {
+  width: 100%;
+  height: 62px;
+  border-radius: 30px;
+  border: solid rgba(189, 211, 208, 0.5) 1px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  transition: 0.3s;
+  background: #F7F8FA;
+}
+
+.form-control:focus {
+  border: solid rgba(30, 41, 59, 0.4) 1px;
+  box-shadow: none;
+}
+
+textarea.form-control {
+  height: 245px;
+  resize: none;
+  padding-top: 20px;
+}
+
+.form-control::-moz-placeholder {
+  color: rgba(30, 41, 59, 0.5);
+}
+
+.form-control::placeholder {
+  color: rgba(30, 41, 59, 0.5);
+}
+
+.form-control::-webkit-input-placeholder {
+  color: rgba(30, 41, 59, 0.5);
+}
+
+.form-control.form-control::-moz-placeholder {
+  color: rgba(30, 41, 59, 0.5);
+}
+
+.form-control:-ms-input-placeholder {
+  color: rgba(30, 41, 59, 0.5);
+}
+
+.form-control:-moz-placeholder {
+  color: rgba(30, 41, 59, 0.5);
+}
+
+.form-group {
+  position: relative;
+}
+
+.InputGroup .form-control {
+  padding-left: 110px;
+}
+
+.InputNumber {
+  border-radius: 30px;
+  height: 100%;
+  line-height: 62px;
+  background: #F7F8FA;
+  width: auto;
+  font-family: var(--Regular);
+  font-size: 18px;
+  color: var(--Color1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(30, 41, 59, 0.5);
+  border: solid rgba(189, 211, 208, 0.5) 1px;
+  padding: 0 26px;
+}
+
 .LeftPanel {
   width: 80px;
   height: 100%;
@@ -1692,6 +1779,90 @@ ul {
 .Favorites .FavoItems .Item .PriceList div span {
   display: inline-block;
   width: 100%;
+}
+
+.ContactPage {
+  display: inline-block;
+  width: 100%;
+  padding: 140px 0;
+  background: #eeeeee url("../img/contact_bg_1.svg") no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+}
+.ContactPage .Left {
+  position: relative;
+  height: 100%;
+}
+.ContactPage .Left .Title {
+  font-family: var(--Bold);
+  font-size: 60px;
+  line-height: 71px;
+  color: var(--Color1);
+  margin-bottom: 170px;
+}
+.ContactPage .Left .Text {
+  font-family: var(--Medium);
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--Color1);
+}
+.ContactPage .Left .Details {
+  display: inline-block;
+  width: 100%;
+  background: #F7F8FA url("../img/contact_details_bg.svg") no-repeat;
+  background-position: 95% center;
+  border-radius: 30px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  position: absolute;
+  bottom: 0;
+}
+.ContactPage .Left .Details .Item {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.ContactPage .Left .Details .Item:last-child {
+  margin-bottom: 0;
+}
+.ContactPage .Left .Details .Item .Icon {
+  margin-right: 28px;
+}
+.ContactPage .Left .Details .Item span {
+  font-family: var(--Medium);
+  font-size: 18px;
+  color: var(--Color1);
+}
+.ContactPage .Right {
+  height: 100%;
+}
+.ContactPage .Right .ContactForm {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: solid rgba(30, 41, 59, 0.2) 1px;
+  border-radius: 30px;
+  background: #F7F8FA;
+  padding: 20px 30px;
+}
+.ContactPage .Right .ContactForm .Title {
+  font-family: var(--Medium);
+  font-size: 40px;
+  color: var(--Color1);
+  line-height: 47px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.ContactPage .Right .ContactForm .Text {
+  font-family: var(--Regular);
+  font-size: 18px;
+  color: var(--Color1);
+  line-height: 21px;
+  text-align: center;
+}
+.ContactPage .Right .ContactForm .Form {
+  margin-top: 17px;
 }
 
 .FootContact {

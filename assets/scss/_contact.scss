@@ -1,3 +1,89 @@
+.ContactPage {
+    display:inline-block;
+    width:100%;
+    padding:140px 0;
+    background:#eeeeee url('../img/contact_bg_1.svg') no-repeat;
+    background-size:100% 100%; 
+    display: flex;    
+    .Left {
+        position:relative;
+        height:100%;
+        .Title {
+            font-family:var(--Bold);
+            font-size:60px;
+            line-height:71px;
+            color:var(--Color1);
+            margin-bottom:170px;
+        }
+        .Text {
+            font-family:var(--Medium);
+            font-size:14px;
+            line-height:25px;
+            color:var(--Color1);
+        }
+        .Details {
+            display:inline-block;
+            width:100%;
+            background:#F7F8FA url('../img/contact_details_bg.svg') no-repeat; 
+            background-position:95% center;
+            border-radius:30px;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+            padding:32px;
+            position:absolute;
+            bottom:0;
+            .Item {
+                display:inline-flex;
+                align-items:center;
+                width:100%;
+                margin-bottom:20px;
+                &:last-child {
+                    margin-bottom:0;
+                }
+                .Icon {
+                    margin-right:28px;
+                }
+                span {
+                    font-family:var(--Medium);
+                    font-size:18px;
+                    color:var(--Color1);
+                }
+            }
+        }
+    }
+    .Right {
+        height:100%;
+        .ContactForm {
+            display:inline-block;
+            width:100%;
+            height:100%;
+            border:solid rgba(30,41,59,0.2) 1px;
+            border-radius:30px;
+            background:#F7F8FA;
+            padding:20px 30px;
+            .Title {
+                font-family:var(--Medium);
+                font-size:40px;
+                color:var(--Color1);
+                line-height:47px;
+                text-align:center;
+                margin-bottom:5px;
+            }
+            .Text {
+                font-family:var(--Regular);
+                font-size:18px;
+                color:var(--Color1);
+                line-height:21px;
+                text-align:center;
+            }
+            .Form {
+                margin-top:17px;
+            }
+        }
+    }
+}
+  
+
+
 .FootContact {
     padding:40px 0 50px 0;
     background:url('../img/contact_bg_1.png'); 
@@ -14,7 +100,7 @@
         font-family:var(--ExtraBold);
         font-size:64px;
         color:var(--Color1);
-        line-height:76px;
+        line-height:76px; 
         margin-bottom:60px;
         text-align:center;
         display:block;
