@@ -4,6 +4,38 @@ $(document).ready(function() {
         e.preventDefault();
         $('body').toggleClass('ShowMenu');
     }); 
+
+    $('.Select').select2();
+
+
+    $('.ApartGallery .row').slick({ 
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: $('.ApartGallery .Prev'),
+        nextArrow: $('.ApartGallery .Next'),
+        variableWidth: false, 
+        autoplay: true,
+        autoplaySpeed:3000,  
+        fade: false,
+        infinite:true,
+        speed: 1000, 
+        dots: false,	 
+        focusOnSelect: false, 
+        //appendDots: $('.HomeClients .Dots'),
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+            }
+          }
+        ]
+    }); 
+    
 }); 
 
 

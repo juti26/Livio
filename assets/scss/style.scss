@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family:NotoSansGeorgianRegular;
-    max-width:100%;
 } 
 html {
     overflow-x:hidden;
@@ -28,6 +27,7 @@ body {
 @import 'about';   
 @import 'page';    
 @import 'favorites';    
+@import 'floor';    
 @import 'contact';   
 @import 'footer';  
 

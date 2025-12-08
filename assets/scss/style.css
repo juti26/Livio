@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   font-family: NotoSansGeorgianRegular;
-  max-width: 100%;
 }
 
 html {
@@ -138,6 +137,10 @@ ul {
   background: #fff;
   color: var(--Color1);
 }
+.ButtonWhite.NoBg {
+  background: none !important;
+  border: none !important;
+}
 
 .ButtonTransparent {
   display: inline-block;
@@ -193,6 +196,80 @@ ul {
   background: #F1C247;
   transition: 0.3s;
   border: none;
+}
+
+.Button3 {
+  display: inline-block;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  font-family: var(--Regular);
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 0 20px;
+  border: solid var(--MainColor) 1px;
+  background: url("../icons/button_arrow.svg") no-repeat;
+  background-position: 96% center;
+}
+
+.BookApartment {
+  display: inline-block;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 30px;
+  font-family: var(--SemiBold);
+  font-size: 16px;
+  color: #000;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.ClearFilter {
+  display: inline-block;
+  background: none;
+  border: none;
+  height: 56px;
+  line-height: 56px;
+  padding: 0 20px;
+  font-family: var(--SemiBold);
+  font-size: 16px;
+  color: var(--Color1);
+}
+
+.SmallButtons a {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 23px;
+  background: #fff;
+  border: solid var(--MainColor) 1px;
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.SmallButtons a.active, .SmallButtons a:hover {
+  border: solid var(--Secondary) 1px;
+}
+
+.AddToFavorite {
+  display: inline-block;
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+.AddToFavorite span {
+  margin-left: 15px;
+  position: relative;
+  top: -4px;
 }
 
 .form-control {
@@ -264,6 +341,162 @@ textarea.form-control {
   color: rgba(30, 41, 59, 0.5);
   border: solid rgba(189, 211, 208, 0.5) 1px;
   padding: 0 26px;
+}
+
+.SelectDiv {
+  margin-bottom: 10px;
+}
+
+.SelectDiv * {
+  width: 100%;
+}
+
+.select2-container {
+  width: 100%;
+}
+
+.select2-container .select2-selection--single {
+  height: 56px;
+  border-radius: 30px;
+}
+
+.select2-container--default .select2-selection--single {
+  border: solid rgba(30, 41, 59, 0.5) 1px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 57px;
+  font-family: var(--Regular);
+  font-size: 16px;
+  color: var(--Color1);
+  padding-left: 20px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: 24px;
+  height: 24px;
+  background: url("../icons/dropdown.svg") no-repeat;
+  top: 17px;
+  right: 18px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+.Arrows div {
+  width: 92px;
+  height: 100%;
+  background: red;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.Arrows div.Prev {
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, rgb(235, 241, 240) 0%, rgba(235, 241, 240, 0) 100%);
+}
+.Arrows div.Next {
+  right: 0;
+  top: 0;
+  background: linear-gradient(to left, rgb(235, 241, 240) 0%, rgba(235, 241, 240, 0) 100%);
+}
+
+.CurrencyInput {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: #f7f8fa;
+  border-radius: 30px;
+  cursor: pointer;
+  border: solid rgba(115, 115, 115, 0.22) 1px;
+  width: 64px;
+  height: 32px;
+  justify-content: space-between;
+}
+.CurrencyInput input {
+  display: none;
+}
+.CurrencyInput input:checked ~ .Selector {
+  left: 50%;
+}
+.CurrencyInput .Option {
+  flex: 1;
+  text-align: center;
+  z-index: 2;
+  font-size: 18px;
+  padding: 6px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.CurrencyInput .Selector {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 30px;
+  border: 1px solid #3ca7a6;
+  left: 0;
+  transition: 0.25s ease;
+  z-index: 1;
+}
+
+.TableDiv {
+  display: inline-block;
+  width: 100%;
+}
+.TableDiv .TableHead {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr 1fr 1fr 40px;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+  line-height: 55px;
+  border-bottom: solid rgb(30, 41, 59) 1px;
+  position: relative;
+}
+.TableDiv .TableHead:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background: rgb(30, 41, 59);
+  bottom: -1px;
+  left: -24px;
+}
+.TableDiv .TableHead .Item {
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: var(--Color1);
+}
+.TableDiv .TableRow {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr 1fr 1fr 40px;
+  align-items: center;
+  border: solid rgba(30, 41, 59, 0.5) 1px;
+  margin-top: 10px;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.TableDiv .TableRow .Item {
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: var(--Color1);
+}
+.TableDiv .TableRow .Item:first-child {
+  padding-left: 30px;
+}
+.TableDiv .TableRow.active, .TableDiv .TableRow:hover {
+  border: solid var(--Secondary) 1px;
 }
 
 .LeftPanel {
@@ -1777,6 +2010,311 @@ textarea.form-control {
   color: #000;
 }
 .Favorites .FavoItems .Item .PriceList div span {
+  display: inline-block;
+  width: 100%;
+}
+
+.FilterDiv {
+  display: inline-block;
+  width: 100%;
+  padding: 60px 0;
+  background: #f7f8fa;
+}
+.FilterDiv .Head {
+  border-bottom: solid var(--Color1) 1px;
+}
+.FilterDiv .Head .Left {
+  padding-right: 14px;
+}
+.FilterDiv .Head .Buttons .ButtonWhite {
+  border: solid rgba(30, 41, 59, 0.5) 1px;
+  font-size: 16px;
+  padding: 0 20px;
+  font-family: var(--Regular);
+}
+.FilterDiv .Content.Border {
+  border-bottom: solid rgb(30, 41, 59) 1px;
+}
+.FilterDiv .Content .TopInfo {
+  height: 55px;
+  width: 100%;
+  line-height: 55px;
+  border-bottom: solid rgb(30, 41, 59) 1px;
+  position: relative;
+}
+.FilterDiv .Content .TopInfo:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background: rgb(30, 41, 59);
+  bottom: -1px;
+  left: -24px;
+}
+.FilterDiv .Content .TopInfo .Price {
+  display: inline-block;
+}
+.FilterDiv .Content .TopInfo .Price span {
+  font-family: var(--Regular);
+  font-size: 16px;
+  color: #000;
+  margin-right: 26px;
+}
+.FilterDiv .Content .Info {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+.FilterDiv .Content .Info .Image {
+  height: 100%;
+}
+.FilterDiv .Content .Info .Image img {
+  height: 100%;
+}
+.FilterDiv .Content .ApartList {
+  padding-top: 50px;
+}
+.FilterDiv .Content .ApartList .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.FilterDiv .Content .ApartList .col-sm-4 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.FilterDiv .Content .ApartList .Item {
+  display: inline-block;
+  width: 100%;
+  border: solid var(--Secondary) 1px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0px 10px 16px 10px;
+  margin-bottom: 4px;
+}
+.FilterDiv .Content .ApartList .Item .List {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 0;
+  border-bottom: solid var(--Secondary) 1px;
+}
+.FilterDiv .Content .ApartList .Item .List div {
+  display: inline-block;
+  float: left;
+  font-family: var(--Regular);
+  font-size: 10px;
+  color: #000;
+}
+.FilterDiv .Content .ApartList .Item .List div.First {
+  width: 40%;
+}
+.FilterDiv .Content .ApartList .Item .List div.Middle {
+  width: 30%;
+  text-align: center;
+}
+.FilterDiv .Content .ApartList .Item .List div.Last {
+  width: 30%;
+  text-align: right;
+}
+.FilterDiv .Content .ApartList .Item .Image {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+.FilterDiv .Content .ApartList .Item .Image img {
+  max-width: 100%;
+  height: 260px;
+}
+.FilterDiv .Content .ApartList .Item .Price {
+  margin-bottom: 14px;
+}
+.FilterDiv .Content .ApartList .Item .Price span {
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #000;
+}
+.FilterDiv .Content .ApartList .Item .Price label {
+  font-family: var(--Regular);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: normal;
+  color: #000;
+  width: 50%;
+  margin-top: 14px;
+  margin-left: -3px;
+}
+.FilterDiv .Content .ApartList .Item .PriceList {
+  display: inline-flex;
+  width: 100%;
+}
+.FilterDiv .Content .ApartList .Item .PriceList div {
+  display: inline-block;
+  margin-right: 30px;
+  font-family: var(--Regular);
+  font-size: 12px;
+  color: #000;
+}
+.FilterDiv .Content .ApartList .Item .PriceList div span {
+  display: inline-block;
+}
+.FilterDiv .ApartGallery {
+  display: inline-block;
+  width: 100%;
+  margin-top: 26px;
+  overflow: hidden;
+  position: relative;
+}
+.FilterDiv .ApartGallery .Item .Image {
+  width: 100%;
+  height: 215px;
+  padding: 0 10px;
+}
+.FilterDiv .ApartGallery .Item .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Sidebar {
+  display: inline-block;
+  width: 100%;
+  border-right: solid var(--Color1) 1px;
+  padding-right: 14px;
+}
+.Sidebar .SidebarTitle {
+  height: 55px;
+  line-height: 54px;
+  font-family: var(--SemiBold);
+  font-size: 24px;
+  color: var(--Color1);
+  border-bottom: solid var(--Color1) 1px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.Sidebar .SidebarTitle:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background: rgb(11, 12, 14);
+  bottom: -1px;
+  right: -24px;
+}
+.Sidebar .Image {
+  width: 100%;
+  height: 280px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.Sidebar .Image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Sidebar .ApartCondition {
+  height: 55px;
+  width: 100%;
+  line-height: 55px;
+  border-bottom: solid rgb(30, 41, 59) 1px;
+  position: relative;
+}
+.Sidebar .ApartCondition:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background: rgb(30, 41, 59);
+  bottom: -1px;
+  right: -24px;
+}
+.Sidebar .ApartCondition span {
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: #000;
+}
+.Sidebar .ApartInfo {
+  padding: 10px 0;
+  border-bottom: solid var(--Color1) 1px;
+  padding-bottom: 20px;
+}
+.Sidebar .ApartInfo .Item {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.Sidebar .ApartInfo .Item span {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: var(--MainColor);
+  border-radius: 100%;
+  margin-right: 20px;
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: #000;
+}
+.Sidebar .ApartInfo .Item label {
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: 0;
+}
+.Sidebar .ApartPrice {
+  margin: 20px 0;
+  position: relative;
+  border-bottom: solid var(--Color1) 1px;
+  padding-bottom: 17px;
+}
+.Sidebar .ApartPrice .PDF {
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.Sidebar .ApartPrice .Price {
+  margin-bottom: 14px;
+}
+.Sidebar .ApartPrice .Price span {
+  font-family: var(--SemiBold);
+  font-size: 18px;
+  color: #000;
+}
+.Sidebar .ApartPrice .Price label {
+  font-family: var(--Regular);
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: normal;
+  color: #000;
+  width: 50%;
+  margin-top: 14px;
+  margin-left: -3px;
+}
+.Sidebar .ApartPrice .PriceList {
+  display: inline-flex;
+  width: 100%;
+}
+.Sidebar .ApartPrice .PriceList div {
+  display: inline-block;
+  margin-right: 30px;
+  font-family: var(--Regular);
+  font-size: 14px;
+  color: #000;
+}
+.Sidebar .ApartPrice .PriceList div span {
+  display: inline-block;
+  width: 100%;
+}
+.Sidebar .BookingDiv {
+  padding: 10px 0 30px 0;
   display: inline-block;
   width: 100%;
 }
